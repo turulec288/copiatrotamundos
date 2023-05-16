@@ -1,0 +1,31 @@
+<h2>Experience Details</h2>
+
+<div>
+  <div style="border: solid 1px red">
+    {{experience.id}}
+    {{experience.titulo}}
+    {{experience.texto}}
+    <img src="{{experiencie.imagen}}" alt="">
+    {{experience.filtro}}
+    {{!-- // este lo saco del objeto experienciade arriba// --}}
+    <a href="/myExperiences/{{experience.id}}/edit">edit</a>
+    <form action="/myExperiences/{{experience.id}}/delete" method="POST">
+      <button type="submit">borrar</button>
+    </form>
+  </div>
+  <a
+    href="/myExperiences/{{experience.id}}/reviews/new"
+    class="btn btn-dark"
+  >Añadir reseña</a>
+  <br></br>
+  <h3>Reseñas</h3>
+  {{#each reviews}}
+    <div style="border: solid 1px red">
+      {{title}}
+      {{rating}}
+      {{comment}}
+{{!-- este lo pillo del modelo --}}
+      <a href="/myExperiences/{{experienceId}}/reviews/{{_id}}">View</a> 
+    </div>
+  {{/each}}
+</div>

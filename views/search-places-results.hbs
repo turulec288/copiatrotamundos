@@ -1,0 +1,20 @@
+<h1>resultados</h1>
+
+{{#each response}}
+    <form action="/create-experience-with-api" method="post">
+    <hr>
+    name: {{name}}
+        <input type="text" name="name" value="{{name}}" hidden>
+    address: {{address}}
+        <input type="text" name="address"  value="{{address}}" hidden>
+    category: {{category}}
+    location: {{location}}
+    lat: {{lat}}
+        <input type="text" name="lat" value="{{lat}}" hidden>
+    lng: {{lng}}
+        <input type="text" name="lng" value="{{lng}}" hidden>
+    number of reviews: {{numReviews}}
+    Detais: <a href="{{datails}}">Ver detalles</a>
+    <button type="submit"> Crear experiencia</button>
+    </form>
+{{/each}}

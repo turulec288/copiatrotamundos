@@ -1,0 +1,34 @@
+<h1>Busca tu sitios</h1>
+<form action="/search-places" method="post">
+    <label for="location">
+        Ciudad
+        <select name="location">
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Dubay">Dubay</option>
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Rome">Rome</option>
+            <option value="Tuscany">Tuscany</option>
+            <option value="">Ninguno</option>
+        </select>
+    </label>
+    <label for="category">
+        Categoria
+        <select name="category" >
+            <option value="attraction">Atracción</option>
+            <option value="restaurant">Restaurante</option>
+            <option value="POI">Punto de interés</option>
+            <option value="">Ninguna</option>
+        </select>
+    </label>
+    <label for="name">
+        Nombre del sitio
+    <input type="text" name="name">
+    </label>
+    <button type="submit">Buscar sitio</button>
+</form>
+{{!-- 
+Comentario: Se lo pasamos a las rutas
+ --}}

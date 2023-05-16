@@ -1,0 +1,13 @@
+<h2>Experiences list</h2>
+
+<div>
+  {{#each experiences}}
+    <div style="border: solid 1px red">
+      {{titulo}}
+      {{texto}}
+      {{imagenes}}
+      {{filtro}}
+      <a href="/myExperiences/{{_id}}">Visitar</a>
+    </div>
+  {{/each}}
+</div>
